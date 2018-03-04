@@ -54,7 +54,7 @@ module.exports = () => ({
     }),
     // Lost Grid.
     // [http://lostgrid.org/docs.html]
-    require('lost'),
+    require("lost"),
     // W3C CSS Level4 :matches() pseudo class, e.g. p:matches(:first-child, .special) { }
     // https://github.com/postcss/postcss-selector-matches
     require("postcss-selector-matches")(),

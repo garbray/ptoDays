@@ -2,7 +2,6 @@ const { resolve } = require("path");
 const webpack = require("webpack");
 
 module.exports = env => {
-
   const regStyle = /\.(css|less|styl|scss|sass|sss)$/;
   if (env) {
     console.log(env);
@@ -23,7 +22,7 @@ module.exports = env => {
       colors: true,
       reasons: true,
       chunks: true,
-      errors: true,
+      errors: true
     },
     module: {
       rules: [
@@ -44,7 +43,7 @@ module.exports = env => {
             {
               // Apply PostCSS plugins including autoprefixer
               loader: "postcss-loader",
-              options: {config: { path: "./build-scripts/postcss.config.js"}}
+              options: { config: { path: "./build-scripts/postcss.config.js" } }
             }
           ]
         }

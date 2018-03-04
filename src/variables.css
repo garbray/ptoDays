@@ -6,7 +6,7 @@
    * Typography
    * ======================================================================== */
 
-  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+  --font-family-base: "Segoe UI", "HelveticaNeue-Light", sans-serif;
 
   /*
    * Layout
@@ -41,9 +41,9 @@
    * Media queries breakpoints
    * ======================================================================== */
 
-  --screen-xs: 480px;  /* Extra small screen / phone */
-  --screen-sm: 768px;  /* Small screen / tablet */
-  --screen-md: 992px;  /* Medium screen / desktop */
+  --screen-xs: 480px; /* Extra small screen / phone */
+  --screen-sm: 768px; /* Small screen / tablet */
+  --screen-md: 992px; /* Medium screen / desktop */
   --screen-lg: 1200px; /* Large screen / wide desktop */
   --screen-xl: 1440px; /* Extra Large screen / wide desktop */
 
