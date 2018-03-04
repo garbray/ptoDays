@@ -1,0 +1,73 @@
+@custom-selector :--heading h1, h2, h3, h4;
+@custom-selector :--tags div, article, section, footer, aside, header;
+
+:root {
+  /*
+   * Typography
+   * ======================================================================== */
+
+  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+
+  /*
+   * Layout
+   * ======================================================================== */
+
+  /**
+  * Basic container width of 90% the view width.
+  */
+  --container-width: 90vw;
+
+  /**
+   * Container maxs out at 1080px.
+   */
+  --max-content-width: 1080px;
+
+  /**
+   * Minimum width of the container.
+   */
+  --min-content-width: 280px;
+
+  /**
+   * Basic gutter sizing.  Elements are spaced horizontally by 30px.
+   */
+  --gutter: 30px;
+
+  /**
+   * This allows elements to simulate being in the grid when they can't be.
+   */
+  --page-gutter: 5vw;
+
+  /*
+   * Media queries breakpoints
+   * ======================================================================== */
+
+  --screen-xs: 480px;  /* Extra small screen / phone */
+  --screen-sm: 768px;  /* Small screen / tablet */
+  --screen-md: 992px;  /* Medium screen / desktop */
+  --screen-lg: 1200px; /* Large screen / wide desktop */
+  --screen-xl: 1440px; /* Extra Large screen / wide desktop */
+
+  /*
+   * Colors
+   * ======================================================================== */
+  --red-100: #d50d10;
+  --red-200: #bf2235;
+  --green-100: #26a747;
+  --grey-100: #2b2b2b;
+  --grey-150: #d8d8d8;
+  --grey-200: #bcbcbc;
+  --grey-300: #f3f3f3;
+  --yellow-100: #ffe511;
+  --yellow-200: #ffdd00;
+  --black-100: #000;
+  --black-200: #2b2b2b;
+  --white: #fff;
+
+  /*
+   * Layers
+   * ======================================================================== */
+  --z-base: 0;
+  --z-mid: 10;
+  --z-high: 100;
+  --z-super: 1000;
+}

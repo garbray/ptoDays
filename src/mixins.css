@@ -1,0 +1,73 @@
+@import 'variables.css';
+
+$gutter: var(--gutter);
+
+/*
+* Lost Grid Settings
+*
+* Lost grid can accept any fraction like: lost-column: 1/3;.  We should stick
+* to a base 12 for consistency purposes like so: lost-column: 4/12;.
+* ======================================================================== */
+@lost flexbox flex;
+@lost gutter $gutter;
+@lost cycle auto;
+@lost clearing left;
+
+/*
+* Breakpoints
+* ======================================================================== */
+$screen-xs: var(--screen-xs);
+$screen-xs-max: calc(var(--screen-xs) - 1px);
+$screen-sm: var(--screen-sm);
+$screen-md: var(--screen-md);
+$screen-lg: var(--screen-lg);
+$screen-xl: var(--screen-xl);
+
+/*
+* Media Queries
+* ======================================================================== */
+@custom-media --extra-small (min-width: $screen-xs);
+@custom-media --extra-small-max (max-width: $screen-xs-max);
+@custom-media --small (min-width: $screen-sm);
+@custom-media --small-only (width >= $screen-sm) and (width < $screen-md);
+@custom-media --medium (min-width: $screen-md);
+@custom-media --medium-only (width >= $screen-md) and (width < $screen-lg);
+@custom-media --large (min-width: $screen-lg);
+@custom-media --extra-large (min-width: $screen-xl);
+
+/*
+* Mixins
+* ======================================================================== */
+
+/**
+* clearfix
+*/
+@define-mixin clearfix {
+  lost-utility: clearfix;
+}
+
+/**
+ * pseudo
+ *
+ * Sets up a pseudo element to be visible and placed absolutely relative
+ * to it's parent element.
+ */
+@define-mixin pseudo {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+/**
+ * visually hidden, but allow screen readers to use
+ */
+@define-mixin visually-hidden {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
