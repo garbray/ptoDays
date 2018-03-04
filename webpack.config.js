@@ -1,5 +1,5 @@
-const { resolve } = require('path');
-const webpack = require('webpack'); // eslint-disable-line
+const { resolve } = require("path");
+const webpack = require("webpack"); // eslint-disable-line
 
 module.exports = env => {
   // const regStyle = /\.(css|less|styl|scss|sass|sss)$/;
@@ -8,15 +8,15 @@ module.exports = env => {
   }
 
   return {
-    context: resolve('src'),
+    context: resolve("src"),
     entry: {
-      app: './js/bootstrap.jsx'
+      app: "./js/bootstrap.jsx"
     },
-    devtool: 'cheap-eval-source-map',
+    devtool: "cheap-eval-source-map",
     output: {
-      filename: 'bundle.js',
-      path: resolve('public'),
-      publicPath: '/public/'
+      filename: "bundle.js",
+      path: resolve("public"),
+      publicPath: "/public/"
     },
     stats: {
       colors: true,
@@ -25,7 +25,7 @@ module.exports = env => {
       errors: true
     },
     devServer: {
-      contentBase: resolve('public'),
+      contentBase: resolve("public"),
       compress: true,
       port: 3000
       // TODO https://www.akadia.com/services/ssh_test_certificate.html
@@ -34,16 +34,16 @@ module.exports = env => {
     module: {
       rules: [
         {
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.jsx?$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /node_modules/
         },
         {
           test: /\.jsx?$/,
-          loader: 'babel-loader',
-          include: resolve('src/js')
-        },
+          loader: "babel-loader",
+          include: resolve("src/js")
+        }
         // {
         //   test: regStyle,
         //   rules: [
