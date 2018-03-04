@@ -1,6 +1,6 @@
 /* eslint react/prop-types: 0 */
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
 const App = () => (
   <div className="App">
@@ -10,4 +10,4 @@ const App = () => (
   </div>
 );
 
-render(<App />, document.getElementById("app"));
+render(<App />, document.getElementById('app'));

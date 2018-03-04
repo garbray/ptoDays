@@ -55,10 +55,11 @@
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "scripts": {
-    "prettier": "pretty-quick",
+    "prettier": "pretty-quick --config .prettierrc.js",
     "build": "webpack -d --env.dev",
     "start": "webpack -p --env.prod",
     "lint": "eslint src/**/*.{js,jsx}",
