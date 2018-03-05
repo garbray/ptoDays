@@ -10,26 +10,31 @@ module.exports = env => {
   return {
     context: resolve('src'),
     entry: {
-      app: './js/bootstrap.jsx',
+      app: './js/bootstrap.jsx'
     },
-    devtool: 'cheap-eval-source-map',
     output: {
       filename: 'bundle.js',
-      path: resolve('public'),
-      publicPath: '/public/',
+      path: resolve('public')
     },
+    devServer: {
+      // contentBase: resolve('public'),
+      contentBase: 'public',
+      compress: true,
+      port: 9000,
+      historyApiFallback: true
+      // TODO https://www.akadia.com/services/ssh_test_certificate.html
+      // generate selfsign certificate to use https and http2
+    },
+    devtool: 'cheap-eval-source-map',
+
     stats: {
       colors: true,
       reasons: true,
       chunks: true,
-      errors: true,
+      errors: true
     },
-    devServer: {
-      contentBase: resolve('public'),
-      compress: true,
-      port: 3000,
-      // TODO https://www.akadia.com/services/ssh_test_certificate.html
-      // generate selfsign certificate to use https and http2
+    resolve: {
+      extensions: ['.js', '.jsx', '.json']
     },
     module: {
       rules: [
@@ -37,13 +42,13 @@ module.exports = env => {
           enforce: 'pre',
           test: /\.jsx?$/,
           loader: 'eslint-loader',
-          exclude: /node_modules/,
+          exclude: /node_modules/
         },
         {
           test: /\.jsx?$/,
           loader: 'babel-loader',
-          include: resolve('src/js'),
-        },
+          include: resolve('src/js')
+        }
         // {
         //   test: regStyle,
         //   rules: [
@@ -54,7 +59,7 @@ module.exports = env => {
         //     }
         //   ]
         // }
-      ],
-    },
+      ]
+    }
   };
 };
