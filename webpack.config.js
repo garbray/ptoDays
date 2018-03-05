@@ -10,18 +10,18 @@ module.exports = env => {
   return {
     context: resolve('src'),
     entry: {
-      app: './js/bootstrap.jsx'
+      app: './js/bootstrap.jsx',
     },
     output: {
       filename: 'bundle.js',
-      path: resolve('public')
+      path: resolve('public'),
     },
     devServer: {
       // contentBase: resolve('public'),
       contentBase: 'public',
       compress: true,
       port: 9000,
-      historyApiFallback: true
+      historyApiFallback: true,
       // TODO https://www.akadia.com/services/ssh_test_certificate.html
       // generate selfsign certificate to use https and http2
     },
@@ -31,10 +31,10 @@ module.exports = env => {
       colors: true,
       reasons: true,
       chunks: true,
-      errors: true
+      errors: true,
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.json']
+      extensions: ['.js', '.jsx', '.json'],
     },
     module: {
       rules: [
@@ -42,13 +42,13 @@ module.exports = env => {
           enforce: 'pre',
           test: /\.jsx?$/,
           loader: 'eslint-loader',
-          exclude: /node_modules/
+          exclude: /node_modules/,
         },
         {
           test: /\.jsx?$/,
           loader: 'babel-loader',
-          include: resolve('src/js')
-        }
+          include: resolve('src/js'),
+        },
         // {
         //   test: regStyle,
         //   rules: [
@@ -59,7 +59,7 @@ module.exports = env => {
         //     }
         //   ]
         // }
-      ]
-    }
+      ],
+    },
   };
 };
