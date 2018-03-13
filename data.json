@@ -1,0 +1,14 @@
+{
+  "user": {
+    "name": "Bryan Garzon",
+    "title": "jr frontend",
+    "startDate": "18/08/2015",
+    "pendingVacationsDays": {
+      "vacationsDays": "12",
+      "rewardsDays": "3"
+    }
+  },
+  "vacationsRules": {
+    "rewardsDays": ""
+  }
+}

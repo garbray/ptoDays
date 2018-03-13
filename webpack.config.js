@@ -10,15 +10,14 @@ module.exports = env => {
   return {
     context: resolve('src'),
     entry: {
-      app: './js/bootstrap.jsx',
+      app: './js/clientApp.jsx',
     },
     output: {
       filename: 'bundle.js',
       path: resolve('public'),
     },
     devServer: {
-      // contentBase: resolve('public'),
-      contentBase: 'public',
+      contentBase: resolve('public'),
       compress: true,
       port: 9000,
       historyApiFallback: true,
