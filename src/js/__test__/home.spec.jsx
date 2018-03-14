@@ -1,10 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Search from '../components/search';
 
-test('Search renders correctly', () => {
-  const component = renderer.create(<Search placeholder="test input" />);
-  const tree = component.toJSON();
+configure({ adapter: new Adapter() });
 
-  expect(tree).toMatchSnapshot();
-});
+test('Search renders correctly', () => {
+  const component = shallow(<Search placeholder="test input"/>);
+  expect(component).toMatchSnapshot();
+})
