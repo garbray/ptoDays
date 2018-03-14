@@ -69,6 +69,7 @@
     "react-router-dom": "^4.2.2"
   },
   "scripts": {
+    "coverage": "NODE_ENV=test jest --coverage",
     "test:u": "NODE_ENV=test jest -u",
     "test": "NODE_ENV=test jest",
     "prettier": "pretty-quick --config .prettierrc.js",

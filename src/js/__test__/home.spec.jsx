@@ -9,3 +9,8 @@ test('Search renders correctly', () => {
   const component = shallow(<Search placeholder="test input" />);
   expect(component).toMatchSnapshot();
 });
+
+test('Search should have an input element', () => {
+  const component = shallow(<Search placeholder="test input" />);
+  expect(1).toEqual(component.find("input").length);
+});
