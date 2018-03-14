@@ -78,9 +78,7 @@
     "dev": "webpack-dev-server -d"
   },
   "jest": {
-    "snapshotSerializers": [
-      "jest-serializer-enzyme"
-    ]
+    "snapshotSerializers": ["jest-serializer-enzyme"]
   },
   "husky": {
     "hooks": {

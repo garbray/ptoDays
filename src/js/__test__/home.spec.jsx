@@ -6,6 +6,6 @@ import Search from '../components/search';
 configure({ adapter: new Adapter() });
 
 test('Search renders correctly', () => {
-  const component = shallow(<Search placeholder="test input"/>);
+  const component = shallow(<Search placeholder="test input" />);
   expect(component).toMatchSnapshot();
-})
+});
