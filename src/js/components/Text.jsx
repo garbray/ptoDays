@@ -1,14 +1,18 @@
+// @flow
 import React from 'react';
-import propTypes from 'prop-types';
 
-const Text = props => (
+type Props = {
+  textLine?: string,
+};
+
+const Text = (props: Props) => (
   <div className="text">
     <p>{props.textLine}</p>
   </div>
 );
 
-Text.propTypes = {
-  textLine: propTypes.string.isRequired,
+Text.defaultProps = {
+  textLine: '',
 };
 
 export default Text;

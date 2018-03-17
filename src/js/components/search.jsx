@@ -24,7 +24,7 @@ class Search extends Component<Props, State> {
     return (
       <div className="search">
         <input
-          placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder.toUpperCase()}
           value={this.state.searchTerm}
           onChange={this.handleSearchTermChange}
         />
