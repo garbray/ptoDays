@@ -1,22 +1,25 @@
 {
   "presets": [
     "react",
-    ["env", {
-      "targets": {
-        "browsers": "last 2 versions"
-      },
-      "loose": true,
-			"modules": false
-    }],
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": "last 2 versions"
+        },
+        "loose": true,
+        "modules": false
+      }
+    ]
   ],
-  /* use state 2 of js */
   "plugins": [
     "react-hot-loader/babel",
-    "babel-plugin-transform-class-properties"],
+    "babel-plugin-transform-class-properties"
+  ],
   "env": {
     "test": {
       "plugins": ["transform-es2015-modules-commonjs"]
     }
   },
-  "ignore": ["node_modules"],
+  "ignore": ["node_modules"]
 }

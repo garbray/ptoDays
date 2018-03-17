@@ -28,6 +28,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.68.0",
     "husky": "^0.15.0-rc.8",
     "jest": "^22.4.2",
     "jest-serializer-enzyme": "^1.0.0",
@@ -82,7 +83,9 @@
     "dev": "webpack-dev-server -d"
   },
   "jest": {
-    "snapshotSerializers": ["jest-serializer-enzyme"]
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
   },
   "husky": {
     "hooks": {

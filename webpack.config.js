@@ -9,22 +9,20 @@ module.exports = env => {
 
   return {
     context: resolve('src'),
-    entry: [
-      'react-hot-loader/patch',
-      'webpack-dev-server/client?http://localhost:9000',
-      'webpack/hot/only-dev-server',
-      './js/clientApp.jsx',
-    ],
+    entry: {
+      app: './js/clientApp.jsx',
+    },
     output: {
       filename: 'bundle.js',
       path: resolve('public'),
+      // publicPath: '/public/',
     },
     devServer: {
       hot: true,
       port: 9000,
       historyApiFallback: true,
       contentBase: resolve('public'),
-      // compress: true,
+      compress: true,
       // TODO https://www.akadia.com/services/ssh_test_certificate.html
       // generate selfsign certificate to use https and http2
     },
@@ -39,9 +37,9 @@ module.exports = env => {
       extensions: ['.js', '.jsx', '.json'],
     },
     plugins: [
-      new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
-      // looks like the common chunks plugin was deprecated in webpack 4
+      new webpack.HotModuleReplacementPlugin(),
+      // TODO looks like the common chunks plugin was deprecated in webpack 4
       // review how to replace it
       // new webpack.optimize.CommonsChunkPlugin({
       //   name: 'commons',
