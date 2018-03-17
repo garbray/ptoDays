@@ -1,4 +1,4 @@
-#Pay Time Off days app
+# Pay Time Off days app
 
 ## use flow-typed
 
@@ -24,3 +24,7 @@ Flow types: [docs](https://flow.org/en/docs/types/)
 Review if is better use isomorphic styles or styled components.
 review if we can use with D3 for analyze the amount of days that a person have componentDidMount or componentWillMount, componentWillUnmount clean components
 Explain 'babel-polyfill' plugin
+
+##Redux
+
+State managment framework
