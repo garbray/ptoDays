@@ -1,18 +1,21 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 
 type Props = {
   textLine?: string,
 };
 
-const Text = (props: Props) => (
-  <div className="text">
-    <p>{props.textLine}</p>
-  </div>
-);
-
-Text.defaultProps = {
-  textLine: '',
-};
+class Text extends Component<Props> {
+  shouldComponentUpdate() {
+    return false;
+  }
+  render() {
+    return (
+      <div className="text">
+        <p>{this.props.textLine}</p>
+      </div>
+    );
+  }
+}
 
 export default Text;
