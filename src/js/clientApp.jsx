@@ -1,22 +1,16 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './routes/home/home';
-import Details from './routes/detail/details';
+import App from './App';
 
-const FourOhFour = () => <h1>404</h1>;
+const renderApp = () => {
+  render(<App />, document.getElementById('app'));
+};
 
-const App = () => (
-  <BrowserRouter>
-    <div className="App">
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/details" component={Details} />
-        <Route component={FourOhFour} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
+renderApp();
 
-render(<App />, document.getElementById('app'));
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    renderApp();
+  });
+}
