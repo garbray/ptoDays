@@ -13,18 +13,18 @@ module.exports = env => {
       app: './js/clientApp.jsx',
     },
     output: {
-      filename: 'bundle.js',
       path: resolve('public'),
-      // publicPath: '/public/',
+      filename: 'bundle.js',
     },
     devServer: {
       hot: true,
       port: 9000,
       historyApiFallback: true,
       contentBase: resolve('public'),
-      compress: true,
       // TODO https://www.akadia.com/services/ssh_test_certificate.html
       // generate selfsign certificate to use https and http2
+      // compress: true,
+      // https: true,
     },
     devtool: 'cheap-eval-source-map',
     stats: {

@@ -1,14 +1,24 @@
 {
-  "user": {
-    "name": "Bryan Garzon",
-    "title": "jr frontend",
-    "startDate": "18/08/2015",
-    "pendingVacationsDays": {
-      "vacationsDays": "12",
-      "rewardsDays": "3"
+  "users": [
+    {
+      "id": "0",
+      "name": "Bryan Garzon",
+      "title": "jr frontend",
+      "startDate": "18/08/2015",
+      "pendingVacationsDays": {
+        "vacationsDays": "12",
+        "rewardsDays": "3"
+      }
+    },
+    {
+      "id": "1",
+      "name": "test user",
+      "title": "senior frontend",
+      "startDate": "18/01/2018",
+      "pendingVacationsDays": {
+        "vacationsDays": "1",
+        "rewardsDays": "0"
+      }
     }
-  },
-  "vacationsRules": {
-    "rewardsDays": ""
-  }
+  ]
 }

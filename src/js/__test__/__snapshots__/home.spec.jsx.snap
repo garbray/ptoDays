@@ -20,7 +20,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <input
-        placeholder="test input"
+        onChange={[Function]}
+        placeholder="TEST INPUT"
+        value=""
       />,
       "className": "search",
     },
@@ -30,7 +32,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "placeholder": "test input",
+        "onChange": [Function],
+        "placeholder": "TEST INPUT",
+        "value": "",
       },
       "ref": null,
       "rendered": null,
@@ -45,7 +49,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <input
-          placeholder="test input"
+          onChange={[Function]}
+          placeholder="TEST INPUT"
+          value=""
         />,
         "className": "search",
       },
@@ -55,7 +61,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "placeholder": "test input",
+          "onChange": [Function],
+          "placeholder": "TEST INPUT",
+          "value": "",
         },
         "ref": null,
         "rendered": null,

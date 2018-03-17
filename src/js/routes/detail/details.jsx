@@ -1,8 +1,18 @@
+// @flow
 import React from 'react';
 
-const Details = () => (
+type Props = {
+  data: Object,
+  back: Function,
+};
+
+const Details = (props: Props) => (
   <div className="landing">
-    <h1>details</h1>
+    <button onClick={props.back}>Back</button>
+    <h1>details and the id was {props.data.id}</h1>
+    <pre>
+      <code>{JSON.stringify(props, null, 4)}</code>
+    </pre>
   </div>
 );
 

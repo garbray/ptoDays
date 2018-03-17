@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react';
-import propTypes from 'prop-types';
 
 type Props = {
   placeholder: string,
@@ -32,9 +31,5 @@ class Search extends Component<Props, State> {
     );
   }
 }
-
-Search.propTypes = {
-  placeholder: propTypes.string.isRequired,
-};
 
 export default Search;
