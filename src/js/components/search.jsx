@@ -1,11 +1,37 @@
-import React from 'react';
+// @flow
+
+import React, { Component } from 'react';
 import propTypes from 'prop-types';
 
-const Search = props => (
-  <div className="search">
-    <input placeholder={props.placeholder} />
-  </div>
-);
+type Props = {
+  placeholder: string,
+};
+
+type State = {
+  searchTerm?: string,
+};
+
+class Search extends Component<Props, State> {
+  state = {
+    searchTerm: '',
+  };
+
+  handleSearchTermChange = (event: SyntheticInputEvent<>) => {
+    this.setState({ searchTerm: event.target.value });
+  };
+
+  render() {
+    return (
+      <div className="search">
+        <input
+          placeholder={this.props.placeholder}
+          value={this.state.searchTerm}
+          onChange={this.handleSearchTermChange}
+        />
+      </div>
+    );
+  }
+}
 
 Search.propTypes = {
   placeholder: propTypes.string.isRequired,
