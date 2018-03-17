@@ -19,3 +19,8 @@ Flow types: [docs](https://flow.org/en/docs/types/)
 ### Apollo
 
 [Apollo docs with express](https://www.apollographql.com/docs/apollo-server/servers/express.html)
+
+##TODO
+Review if is better use isomorphic styles or styled components.
+review if we can use with D3 for analyze the amount of days that a person have componentDidMount or componentWillMount, componentWillUnmount clean components
+Explain 'babel-polyfill' plugin

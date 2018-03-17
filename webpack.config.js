@@ -9,9 +9,7 @@ module.exports = env => {
 
   return {
     context: resolve('src'),
-    entry: {
-      app: './js/clientApp.jsx',
-    },
+    entry: ['babel-polyfill', './js/clientApp.jsx'],
     output: {
       path: resolve('public'),
       filename: 'bundle.js',
