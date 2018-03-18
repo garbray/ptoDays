@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack'); // eslint-disable-line
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = env => {
   // const regStyle = /\.(css|less|styl|scss|sass|sss)$/;
@@ -37,6 +38,7 @@ module.exports = env => {
     plugins: [
       new webpack.NamedModulesPlugin(),
       new webpack.HotModuleReplacementPlugin(),
+      // new BundleAnalyzerPlugin(),
       // TODO looks like the common chunks plugin was deprecated in webpack 4
       // review how to replace it
       // new webpack.optimize.CommonsChunkPlugin({

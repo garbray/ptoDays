@@ -19,9 +19,9 @@ class Users extends Component<Props> {
             href={`details/${user.id}`}
             key={user.name.toLowerCase().replace(/ /g, '')}
           >
-            <pre>
-              <code>{JSON.stringify(user, null, 4)}</code>
-            </pre>
+            <p> {user.name} </p>
+            <p> {user.title} </p>
+            <p> {user.startDate} </p>
           </Link>
         ))}
       </div>

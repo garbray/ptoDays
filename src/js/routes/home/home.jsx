@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import Text from '../../components/Text';
 import Search from '../../components/search';
 import Users from '../../components/Users';
@@ -23,15 +23,18 @@ class Home extends Component<Props, State> {
     this.setNewData();
   }
 
-  async setNewData() {
-    try {
-      const { data } = await axios(
-        'https://jsonplaceholder.typicode.com/posts/1',
-      );
-      this.setState({ data });
-    } catch (error) {
-      console.log('error loading data', error); // eslint-disable-line
-    }
+  // async setNewData() {
+  //   try {
+  //     const { data } = await axios(
+  //       'https://jsonplaceholder.typicode.com/posts/1',
+  //     );
+  //     this.setState({ data });
+  //   } catch (error) {
+  //     console.log('error loading data', error); // eslint-disable-line
+  //   }
+  // }
+  setNewData() {
+    this.setState({ data: { title: 'testing new title' } });
   }
 
   render() {
