@@ -12,8 +12,8 @@ module.exports = env => {
     context: resolve('src'),
     entry: ['babel-polyfill', './js/clientApp.jsx'],
     output: {
-      path: resolve('public'),
-      filename: 'bundle.js',
+      path: resolve('dist'),
+      filename: '[name].bundle.js',
     },
     devServer: {
       hot: true,
@@ -46,6 +46,18 @@ module.exports = env => {
       //   filename: 'commons.js',
       // }),
     ],
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            // test: /[\\/]node_modules[\\/]/,
+            test: /[\\/]react[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      },
+    },
     module: {
       rules: [
         {
